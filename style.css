@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400|Quicksand:300,400&display=swap');
+:root {
+    --red: #ee6588;  /* rgb(238, 101, 136) */
+    --orange: #f69560;  /* rgb(246, 149, 96) */
+    --brown: #937f8f;
+    --gray: #5a6284;  /* rgb(90, 98, 132) */
+    --text: #7d7d7d;
+    --borders: #dfdfdf;
+    --lightgray: #f1f1f1;
+    --socialinks: #bbbbbb;
+    --padding: 50px;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    line-height: 1.8;
+    font-size: 18px;
+    font-family: 'Quicksand', sans-serif;
+    color: var(--text);
+    font-weight: 300;
+    background-image: linear-gradient(rgba(255,255,255,.7),rgba(255,255,255,.4)),url(img/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+}
+
+.container{
+    width: 80%;
+    margin:  100px auto;
+}
+
+
+button{
+    background: transparent;
+    color: var(--lightgray);
+    padding: 15px 25px;
+    border: 2px solid var(--lightgray);
+    border-radius: 5%;
+    font-size: 1rem;
+}
+
+button:hover{
+    cursor: pointer;
+    transition: .4s ease;
+    color: var(--red);
+    background: var(--lightgray);
+}
+
+h4{
+    font-size: 2rem;
+}
+
+/***************************
+grid
+***************************/
+.row::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+[class*="col-"] {
+  float: left;
+  padding: 30px;
+}
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+/***************************
+ H E A D E R
+***************************/
+
+
+header{
+    background-image: linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8)),url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 100px;
+    opacity: .7;
+}
+
+header hgroup{
+    text-align: center;
+    color: var(--lightgray);
+    background: linear-gradient(to right, var(--red),var(--orange));
+    margin: 0px 100px;
+    padding: 50px 0;
+    opacity: .9;
+}
+
+header hgroup .logo{
+    font-size: 3rem;
+    font-weight: 800;
+}
+
+header button{
+    margin-top: 20px;
+}
+
+/***************************
+O N E C O L U M N 
+***************************/
+
+.one-column {
+    background: var(--lightgray);
+    text-align: center;  
+    padding: var(--padding);
+}
+
+.one-column h4{
+    color: var(--red);
+    padding-bottom: 20px;
+}
+
+/***************************
+T W O C O L U M N S 
+***************************/
+
+
+.two-columns .col-6:nth-child(1){
+    color: var(--lightgray);
+    padding: var(--padding);
+    background: linear-gradient(to right, var(--red),var(--orange));
+}
+
+.two-columns .col-6:nth-child(1) hgroup{
+    padding-bottom: 20px;
+}
+
+.two-columns .col-6:nth-child(2) {
+    background-image: url(img/two-column.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 292px;
+}
+
+
+/***************************
+G A L L E R Y 
+***************************/
+
+.gallery .col-4{
+    background: var(--lightgray);
+    padding-top: var(--padding);
+    padding-bottom: var(--padding);
+}
+
+.gallery .row:nth-child(1) .col-4{
+    padding-bottom: 20px;
+}
+
+.gallery .row:nth-child(2) .col-4{
+    padding-top: 20px;
+}
+
+.gallery .col-4 img{
+    width: 100%; 
+    box-shadow: 5px 2px 20px var(--gray);
+}
+
+
+/***************************
+ N E W S L E T T E R 
+***************************/
+
+.newsletter{
+    background: linear-gradient(to right, var(--brown),var(--gray)); 
+    padding: var(--padding);
+    text-align: center;
+}
+
+.newsletter h4{
+    color: var(--lightgray);
+}
+
+.newsletter p{
+    color: var(--lightgray);
+    padding: 25px; 
+}
+  
+::placeholder{
+    color: var(--socialinks);
+    font-weight: 600;
+}
+
+.newsletter .sign-up-button{
+    position: relative;
+    color: var(--text);
+    background: var(--lightgray);
+    right: 10px;
+    font-weight: 600; 
+}
+
+
+.newsletter input{
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/***************************
+C O N T A C T
+***************************/
+
+.contact{
+    background: white;
+    text-align: center;
+    padding: var(--padding);
+}
+
+.contact h4{
+    color: var(--red);
+}
+
+.contact i{
+    color: var(--red);
+    padding: 20px;
+    border: 2px solid var(--lightgray);
+    border-radius: 50%;    
+}
+
+.contact .col-4{
+    border-right: 1px solid lightgray;
+    margin-top: 30px;
+    padding: var(--padding);
+}
+
+
+.contact .col-4:nth-child(3){
+    border-right: none;
+}
+
+/***************************
+F O O T E R
+***************************/
+
+footer{
+    background: var(--lightgray);
+}
+
+footer i{
+    color: var(--socialinks);
+}
+
+footer ul li{
+    display: inline-block;
+}
+
+footer ul{
+    float: right;
+}
+
+footer ul li a{
+    font-size: 1.1rem;
+    padding: 0px 15px;
+    text-decoration: none;
+}
+
+/***************************
+R E S P O N S I V E
+***************************/
+
+@media(max-width: 768px) {
+     [class*="col-"] {
+    
+        padding: 0px;
+        width: 100%;
+    }
+    
+    footer ul {
+       position: relative;
+       
+    }
+    
+    footer p{
+        font-size: .8rem;
+        position: absolute;
+    }
+    
+    footer i{
+        font-size: 1rem;
+    }
+    
+    .contact .col-4{
+        border-right: none;
+        border-bottom: 1px solid lightgray;
+    }
+    
+    .contact .col-4:nth-child(3){
+
+        border-bottom: none;
+    }
+    
+    header hgroup {
+        margin: 10px 10px;
+    }
+    
+    .two-columns .col-6:nth-child(1) {
+        text-align: center;
+    }
+    
+    .gallery .col-4{
+   
+        padding-top: 20px;
+        padding-bottom: 20px;
+
+    }
+
+}
+
+@media(min-width: 768px), @media(max-width:1024px){
+    
+    .two-columns .col-6:nth-child(2) {
+        height: 350px;
+    }
+    
+    .two-columns .col-6:nth-child(1) {
+        height: 350px;
+    }
+    
+    .two-columns .col-6 hgroup{
+        font-size: 1rem; 
+    }
+    
+    .two-columns .col-6 hgroup button{
+        margin-top: 10px; 
+    }
+    
